@@ -1,0 +1,15 @@
+Calculo de indice de inflacion
+
+Tengo un array de tipo float donde voy a tener 
+los tres ultimos meses de inflacion
+
+Tengo que calcular el total trimestral.
+
+Los indices son
+
+Octubre 2.7
+Noviembre 2.9
+Diciembre 3.5
+
+Voy a usar arrays, for
+

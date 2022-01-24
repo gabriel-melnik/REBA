@@ -9,5 +9,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 public class CursoSpringApplication {
 	public static void main(String[] args) {
 		System.out.println("Bienvenidos al curso de REBA");
+		new ManejoArrays().correr();
 	}
 }
