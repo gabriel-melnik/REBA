@@ -1,0 +1,38 @@
+package edu.it;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+@SpringBootApplication
+@EnableAspectJAutoProxy
+public class CursoSpringApplication {
+	public static void main(String[] args) {
+		System.out.println("Bienvenidos al curso de REBA");
+		var inflacion = new Inflacion();
+		inflacion.calcular();	
+	}
+}
+
+
+package edu.it;
+
+public class Inflacion {
+
+		public void calcular() {
+			float[] arrIndices = new float [3];
+			
+			arrIndices [0] = 0.027f;
+			arrIndices [1] = 0.029f;
+			arrIndices [2] = 0.035f;
+			
+			float trimestral = 0;
+			
+			for (int x=0; x < arrIndices.length; x++) {
+				trimestral = trimestral + arrIndices[x];		
+		
+			}
+			
+			System.out.println(trimestral * 100 + "%");
+		}
+}

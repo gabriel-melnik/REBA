@@ -8,7 +8,11 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 public class CursoSpringApplication {
 	public static void main(String[] args) {
-		System.out.println("Bienvenidos al curso de REBA");
-		new IPC().calcular();
+		float Octubre = 2.7f;
+		float Noviembre  = 2.9f;
+		float Diciembre  = 3.5f;
+		float trimestral = Octubre + Noviembre + Diciembre;
+
+		System.out.println(trimestral);
 	}
 }

@@ -8,7 +8,16 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 public class CursoSpringApplication {
 	public static void main(String[] args) {
-		System.out.println("Bienvenidos al curso de REBA");
-		new IPC().calcular();
+        float[] arrInflacion = new float[3];		
+        float promedio=0;
+		arrInflacion[0] = (float)2.7;
+		arrInflacion[1] = (float)2.9;
+		arrInflacion[2] = (float)3.5;
+		for (int x = 0; x < arrInflacion.length; x++) {
+			promedio=arrInflacion[x]+promedio;
+		}
+		promedio=promedio/3;
+		System.out.println(promedio);
+		}		
 	}
-}
+

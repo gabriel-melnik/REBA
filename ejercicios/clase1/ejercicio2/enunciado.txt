@@ -1,0 +1,21 @@
+3n + 1 es un problema que se planteo hace 100 años
+y no tiene solucion
+lo que si se comprueba en la mayoria de los casos
+
+
+parto de un numero z si z es par ?
+   lo divido por 2
+si z es impar ? le aplico la formula ((3 * z) + 1)
+
+Luego, vuelvo a iterar. Evaluo lo mismo.
+
+Si z es par lo divido por 2
+Si z es impar le aplico la formula.
+
+
+Que dice la conjetura dice que:
+Todos los numeros llegan a 1
+Como dato de color el 1 es impar si le aplico la formlula 4, 2, 1
+Esto se llama el 4,2,1 loop.
+
+ 
