@@ -1,0 +1,68 @@
+package edu.it;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+@SpringBootApplication
+@EnableAspectJAutoProxy
+public class CursoSpringApplication {
+	public static void main(String[] args) {
+		
+		Botella botella1 = new Botella(1000);
+		Botella botella2 = new Botella(500);
+		Botella botella3 = new Botella(700);
+		Botella botella4 = new Botella(800);
+		Botella botella5 = new Botella(900);
+		
+		Botella arrBotellas [] = {botella1, botella2, botella3, botella4, botella5};
+		
+		
+		arrBotellas[0].servir(400);
+		arrBotellas[3].servir(200);
+		arrBotellas[4].servir(1200);
+		arrBotellas[2].servir(300);
+		arrBotellas[2].servir(300);
+
+		for (int x=0; x < arrBotellas.length; x++){
+			
+			System.out.println(arrBotellas[x].contenido);
+		}
+		
+		arrBotellas[3].servir(400);
+		arrBotellas[4].servir(100);
+		
+		
+		for (int x=0; x < arrBotellas.length; x++){
+			
+			System.out.println(arrBotellas[x].contenido);
+		}
+		
+	}
+}
+
+package edu.it;
+
+public class Botella {
+	
+	Integer contenido;
+	
+	public Botella(Integer contenido) {
+		this.contenido = contenido;
+	}
+	
+	public void servir (int cantidad) {
+		if (contenido != 0) {
+		
+			if (contenido >= cantidad ) {
+			
+			contenido = contenido - cantidad;
+			}
+			else {
+			
+			contenido = 0;
+			}
+		}
+		
+	}
+}
