@@ -1,0 +1,53 @@
+package edu.it;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class ingresoPorConsola {
+	public void test() {
+		System.out.println("Ingrese 0 piedra, 1 papel, 2 tijera");
+		Scanner scn = new Scanner(System.in);
+		Integer usuario = scn.nextInt();
+		
+		System.out.println("Juega el computador");
+		int computadora = new Random().nextInt(3);
+		System.out.println(computadora);
+		switch(resultado(usuario, computadora)) {
+		case 0:
+			System.out.println("Empate");
+			break;
+		case 1: 
+			System.out.println("Gana usuario");
+			break;
+		case 2:
+			System.out.println("Gana computadora");
+			break;
+		default:
+			System.out.println("BUG");
+			break;
+		}
+	}
+		
+	 public Integer resultado (int ppp, int z) {
+			if (ppp==z) {
+				return 0;
+			} else if (((ppp == ConstantesPPT.PIEDRA) && (z == ConstantesPPT.PAPEL)) || ((ppp == ConstantesPPT.PAPEL) && (z==ConstantesPPT.PAPEL)) || ((ppp == ConstantesPPT.TIJERA) && (z==ConstantesPPT.PIEDRA))) {
+				return 2;
+			} else { 
+				return 1;
+			}
+	 }
+		/***
+		 * Mapear el 0 ConstantesPPT.PIEDRA
+		 * Mapear el 1 ConstantesPPT.PAPEL
+		 * Mapear el 2 ConstantesPPT.TIJERA
+		 */
+		
+		/*
+		 * La funcion pura va a tener 9 casos de uso
+		 * jugar(PIEDRA, PIEDRA) -> 0
+		 * jugar(PIEDRA, PAPEL) -> 2
+		 * jugar(PIEDRA, TIJERA) ->  1
+		 */
+	}
+
