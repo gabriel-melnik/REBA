@@ -1,0 +1,27 @@
+Funciones puras
+
+Que son ????
+
+La funcion pura (es un metodo) 
+
+en virtud de uno o mas parametros tiene la siguiente regla
+
+************** a iguales parametros retorna el mismo valor
+
+suma(2 , 3) -> 5  Funciones sobreyectivas
+suma(1 , 4) -> 5
+resta(2, 1) -> 1
+
+PiedraPapelTijera(PIEDRA, PAPEL) -> GANA2
+
+metodos static para que ?????? paras las funciones puras.
+
+EsPrimo(78135135549871) Pura o impura ?????
+EsPrimo(78135135549871, PrimosAnteriores) -> True|False
+
+AplicarPromoVamosLosJueves(VISA, 1000, JUBILADO) Impura en virtud de cuando la llamo 
+                                                 de un resultado diferente.
+
+AplicarPromoVamosLosJueves(VISA, Date(), 1000, JUBILADO) PURA A mismo input mismo output
+
+ 
