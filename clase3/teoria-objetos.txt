@@ -1,0 +1,57 @@
+0) Familias
+
+   Funcional -> lisp
+   Estructurado -> Fortran
+
+   Funcional
+
+   let lxc = lecturaXConsola
+   let str1 = get lxc arryNombres
+   let rnd = generarRandom 0..2
+   let str2 = get rnd arraNombres
+   let gana = jugadaPPT lxc, rnd
+   let nombre = get gana arrayNombresGanador
+   let z = prom cant "gana1" arrayGanadores
+
+   Estructurada
+
+   puedo inventar estructura de datos
+   procedimientos -> side effects 
+   functions -> side effects o ser puras
+   
+
+   Objects
+
+   Herencia. Si bien en estructurada existe ? es el tipo de herencia que no vamos a utilizar
+             en objetos
+   Encapsulamiento: Si se dan cuenta ? en un metodo tambien hay encapsulamiento, es decir
+                    fuera del metodo (en estructurado) no existen las variables definidas
+                    dentro del metodo.
+   Encapsulamiento tiene 2 scopes: el del metodo y el del objeto.
+   Polimorfismo: Que pasa si tenemos dos jugadores, que pueden ser 
+              
+                 humano:humano
+                 humano:compu
+                 compu:humano
+                 compu:compu
+
+                 El comportamiento del origen de la jugada me importa ? a la hora de 
+                 evaluar si gano el jugador 1 o el jugador 2 ????
+
+                 Interface Connection {
+                    void connect();
+                    void disconnect();
+                 }
+
+                 public void realizarVuelcoHipoteca(Connection conn, Repository rep, Cuota[] cuotas) {
+                     conn.connect();
+                     for (Cuota cuota : cuotas) {
+                        rep.grabar(cuota.capital);
+                        rep.grabar(cuota.interes);
+                        rep.grabar(cuota.segvida);
+                        rep.grabar(cuota.total);
+                     }
+                     conn.disconnect();
+                 }
+
+1) Desde los 80s hasta aca. Fue cambiando muchisimo.

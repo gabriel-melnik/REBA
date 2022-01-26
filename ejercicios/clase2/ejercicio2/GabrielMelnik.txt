@@ -1,0 +1,33 @@
+package edu.it;
+
+import java.util.Random;
+import java.util.Scanner;
+import java.util.HashMap;
+
+public class ingresoPorConsola {
+   public static void main(String[] args) {
+      // Create a HashMap object called capitalCities
+      HashMap<String, String> PPT = new HashMap<String, String>();
+      String input;
+      String resultados;
+      // Add keys and values (Country, City)
+      PPT.put("piedrapiedra", "empate");
+      PPT.put("piedrapapel", "gana papel");
+      PPT.put("piedratijera", "gana tijera");
+      PPT.put("papelpiedra", "gana papel");
+      PPT.put("papelpapel", "empate");
+      PPT.put("papeltijera", "pierde papel");
+      PPT.put("tijerapiedra", "pierde tijera");
+      PPT.put("tijerapapel", "gana tijera");
+      PPT.put("tijeratijera", "empate");
+      System.out.println(PPT);
+      Scanner intel = new Scanner(System.in );
+      System.out.print( " Ingrese piedra, papel o tijera ");
+      Scanner myObj = new Scanner(System.in);
+      input = myObj.nextLine();
+      resultados = input + "tijera";
+
+      System.out.println(PPT.get(resultados));
+
+   }
+}

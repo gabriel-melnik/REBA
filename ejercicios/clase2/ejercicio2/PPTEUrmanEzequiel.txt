@@ -1,0 +1,89 @@
+package edu.it;
+
+import java.util.random.*;
+import java.util.Scanner;
+
+import org.springframework.boot.SpringApplication;
+
+//@SpringBootApplication
+//@EnableAspectJAutoProxy
+public class CursoSpringApplication {
+	public static void main(String[] args) {
+		
+		System.out.println("Bienvenidos al curso de REBA");
+				
+		Integer pptJugador = IngresoPorConsola.ingresoJugador();
+		
+		Integer pptComputador = IngresoPorConsola.juegaComputador();
+				
+		System.out.println(jugar(pptJugador,pptComputador));
+	
+	}
+	
+	
+	private static String jugar(Integer pptJugador, Integer pptComputador) {
+		
+		if (pptJugador == ConstantesPPT.PIEDRA && pptComputador == ConstantesPPT.PIEDRA){
+			return "Empate";}
+		else if(pptJugador == ConstantesPPT.PIEDRA && pptComputador == ConstantesPPT.PAPEL)
+		{return "Gana computador";}
+		else if(pptJugador == ConstantesPPT.PIEDRA && pptComputador == ConstantesPPT.TIJERA)
+		{return "Gana jugador";}
+		else if(pptJugador == ConstantesPPT.PAPEL && pptComputador == ConstantesPPT.PAPEL)
+		{return "Empate";}
+		else if(pptJugador == ConstantesPPT.PAPEL && pptComputador == ConstantesPPT.PIEDRA)
+		{return "Gana jugador";}
+		else if(pptJugador == ConstantesPPT.PAPEL && pptComputador == ConstantesPPT.TIJERA)
+		{return "Gana computador";}
+		else if(pptJugador == ConstantesPPT.TIJERA && pptComputador == ConstantesPPT.TIJERA)
+		{return "Empate";}
+		else if(pptJugador == ConstantesPPT.TIJERA && pptComputador == ConstantesPPT.PAPEL)
+		{return "Gana jugador";}
+		else if(pptJugador == ConstantesPPT.TIJERA && pptComputador == ConstantesPPT.PIEDRA)
+		{return "Gana computador";}
+		else {
+		return "";}
+	}
+	
+package edu.it;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class IngresoPorConsola {
+
+	//2 ingresos: persona y maquina
+	//0 empate
+	//1 gan jug 1
+	//2 gan jug 2
+	
+	public static Integer ingresoJugador() {
+		System.out.println("Ingrese una opción:"
+				+ " 1-Piedra"
+				+ " 2-Papel" 
+				+ " 3-Tijera");
+		
+		Scanner scn = new Scanner(System.in);
+		return scn.nextInt();
+	}	
+	
+	public static Integer juegaComputador() { 
+		System.out.println("Juega el computador");
+		int z = new Random().nextInt(3);
+
+		return z;
+	}
+	
+	
+	
+}
+
+package edu.it;
+
+public class ConstantesPPT {
+
+	public final static Integer PIEDRA = 0;
+	public final static Integer PAPEL = 1;
+	public final static Integer TIJERA = 2;
+}
+	
