@@ -1,0 +1,18 @@
+Tengo la interfaz objeto volador (clase totalmente abstracta)
+
+La unica implementacion que hay es Avion
+
+Quiero que agreguen helicoptero
+Quiero que agreguen PiedrazoAlArbitro
+
+Hay que agregar una clase
+
+class Helicoptero implements ObjetoVolador {}
+clase PiedrazoAlArbitro implements ObjetoVolador {}
+
+
+Noten que EjemploBasicoPolimorfismo
+no se ve afectado en git
+
+si quiero comparar las diferencias NO noto diferencia alguna.
+
