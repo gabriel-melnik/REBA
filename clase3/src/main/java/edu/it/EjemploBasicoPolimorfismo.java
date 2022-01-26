@@ -8,5 +8,21 @@ public class EjemploBasicoPolimorfismo {
 		objetoVolador.viajar();
 		System.out.println("Voy a aterrizar");
 		objetoVolador.aterrizar();
+		
+		/*
+		 * var ejemploBasicoPolimorfismo = 
+				new EjemploBasicoPolimorfismo();
+		 * 
+		 * for (String s : args) {
+			System.out.println(s);
+		}
+		
+		String nombreClase = args[0];
+
+		ObjetoVolador objVol = 
+				(ObjetoVolador)Class.forName(nombreClase).getConstructor().newInstance();
+		
+		ejemploBasicoPolimorfismo.realizarTrayecto(objVol);
+		 */
 	}
 }

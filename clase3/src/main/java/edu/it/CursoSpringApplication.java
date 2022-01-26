@@ -8,10 +8,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @SpringBootApplication
 @EnableAspectJAutoProxy
 public class CursoSpringApplication {
-	public static void main(String[] args) {
-		var ejemploBasicoPolimorfismo = 
-				new EjemploBasicoPolimorfismo();
-		
-		ejemploBasicoPolimorfismo.realizarTrayecto(new Avion());
+	public static void main(String[] args) throws Exception {
+		new Herencia().muestraHerencia();
 	}
 }
