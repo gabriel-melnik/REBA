@@ -1,0 +1,86 @@
+package edu.it;
+
+import org.springframework.boot.SpringApplication;
+
+//@SpringBootApplication
+//@EnableAspectJAutoProxy
+public class CursoSpringApplication {
+	public static void main(String[] args) {
+		
+		new EjemploBasicoPolimorfismo();
+		
+		EjemploBasicoPolimorfismo.realizarTrayecto(new Avion());
+		EjemploBasicoPolimorfismo.realizarTrayecto(new Helicoptero());
+		EjemploBasicoPolimorfismo.realizarTrayecto(new PiedrazoAlArbitro());			
+	}	
+				
+}
+
+---------------------------------------------------------------------------------------
+
+package edu.it;
+
+public interface ObjetoVolador {
+	void despegar();
+	void viajar();
+	void aterrizar();
+}
+---------------------------------------------------------------------------------------
+package edu.it;
+
+public class Avion implements ObjetoVolador {
+	public void despegar() {
+		System.out.println("acelero");
+		System.out.println("despliega los flaps");
+		System.out.println("guarda las ruedas");
+	}
+	public void viajar() {
+		System.out.println("velocidad constantes millas / hora");
+	}
+	public void aterrizar() {
+		System.out.println("saco las ruedas");
+		System.out.println("despluego otros flaps");
+		System.out.println("trato de no pifiarle a la pista");
+		System.out.println("toco primero con las de atraz");
+		System.out.println("luego las de adelante");
+		System.out.println("turbina inversa");
+	}
+}
+---------------------------------------------------------------------------------------
+
+package edu.it;
+
+public class Helicoptero implements ObjetoVolador {
+	public void despegar() {
+		System.out.println("acelero");
+		System.out.println("prendo las helices");
+		System.out.println("me elevo");
+	}
+	public void viajar() {
+		System.out.println("velocidad constantes millas / hora");
+	}
+	public void aterrizar() {
+		System.out.println("chequeo pista");
+		System.out.println("bajo a tierra");
+	}
+}
+
+---------------------------------------------------------------------------------------
+
+package edu.it;
+
+public class PiedrazoAlArbitro implements ObjetoVolador {
+	public void despegar() {
+		System.out.println("consigo la piedra");
+		System.out.println("paso la piedra por los controles");
+		System.out.println("mido la distancia");
+		System.out.println("arrojo la piedra");
+	}
+	public void viajar() {
+		System.out.println("trayecto constante");
+	}
+	public void aterrizar() {
+		System.out.println("impact al arbitro");
+		System.out.println("partido suspendido");
+	}
+}
